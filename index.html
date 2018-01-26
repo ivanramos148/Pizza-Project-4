@@ -1,52 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-      <link href="css/styles.css" rel="stylesheet" type="text/css">
-      <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
-      <script src="js/jquery-3.2.1.js"></script>
-      <script src="js/scripts.js"></script>
-    <title></title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+   <link href="css/styles.css" rel="stylesheet" type="text/css">
+   <script src="js/jquery-3.2.1.js"></script>
+   <script src="js/scripts.js"></script>
+    <title>Pizza</title>
   </head>
   <body>
-    <div class="container">
-      <form id="userInput">
-        <h1>Pizza Pizza</h1>
-          <div class="row">
-            <div class="forn-group">
-              <label for="pizzaSize">Pizza Size</label>
-                <select id="pizzaSize">
-                  <option value="Large">Large</option>
-                  <option value="Medium">Medium</option>
-                </select>
-              </div>
-            <div class="forn-group">
-              <label for="pizzaToppings">Pizza Toppings</label>
-                <select id="pizzaToppings">
-                  <option value="anchovys">anchovys</option>
-                  <option value="pepperoni">pepperoni</option>
-                </select>
-              </div>
-            <div class="forn-group">
-              <label for="sodas">Sodas</label>
-                <select id="sodas">
-                  <option value="Sprite">Sprite</option>
-                  <option value="Coke">Coke</option>
-                </select>
-              </div>
-            <div class="forn-group">
-              <label for="extras">Extras</label>
-                <select id="extras">
-                  <option value="cheese">Cheese Bread</option>
-                  <option value="none">NONE</option>
-                </select>
-              </div>
-            <br>
-        <button type="text" class="btn">Submit</button>
-        <div id="hello">
-          hello
-        </div>
-      </form>
+    <div class="conatainer">
+      <h3>Order your Pizza</h3>
+      <form id="pizza">
+        <div class="col-md-6">
+        <select class="form-control" id="size">
+          <option>small</option>
+          <option>medium</option>
+          <option>large</option>
+        </select>
+        <select class="form-control" id="toppings">
+          <option>cheese</option>
+          <option>peperoni</option>
+          <option>artichoke</option>
+          <option>anchovy</option>
+        </select>
+        <select class="form-control" id="extras">
+          <option>CheeseBread</option>
+          <option>Desserts</option>
+          <option>None</option>
+        </select>
+      </div>
+      <br>
+      <button type="submit" name="button">submit</button>
+
+        <span id="result"></span>
+    </form>
+
+
     </div>
+
   </body>
 </html>

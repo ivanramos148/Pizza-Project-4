@@ -1,40 +1,37 @@
-//Business Logic
-function Pizza(size, toppings, sodas, extras) {
-  this.size = size;
-  this.toppings = toppings;
-  this.sodas = sodas;
-  this.extras = extras;
+function Pizza(size, toppings) {
+    this.size = size;
+    this.toppings = toppings;
+
 }
 
-function pizzaOrder() {
+function chosenPizza() {
   var size = $("#size").val();
   var toppings = $("#toppings").val();
-  var sodas = $("#sodas").val();
-  var extras = $("#extras").val();
-  var newPizza = new Pizza(pize, toppings, sodas, extras)
+  var newCost = new Pizza(size, toppings);
 
-  return newPizza;
+  return newCost
 }
 
-    Pizza.prototype.fullPizza = function() {
-      if (this.size === "Large") {
-        $("#hello").show();
 
-    }
-
-    }
-
-
-
-
-
-//User Interface
+Pizza.prototype.cost = function(){
+  var cost = 0;
+ if (this.size === "small" || this.size === "medium"){
+  cost = 10;
+  } else {
+    cost = 20;
+  }
+if (this.toppings === "cheese" || this.toppings === "peperoni" || this.toppings === "artichoke"|| this.toppings === "anchovy"){
+    cost = cost + 1
+} else {
+  cost = 0
+}
+  return cost;
+}
 $(document).ready(function(){
-  $("form#userInput").submit(function(event) {
+  $("#pizza").submit(function(event){
     event.preventDefault();
+    var answer = chosenPizza();
 
-
-
-
+    $("#result").text("your total cost is " + answer.cost());
   });
 });
