@@ -8,14 +8,15 @@
     <title>Pizza</title>
   </head>
   <body>
-    <div class="conatainer">
+    <div class="container">
       <div class="jumbotron">
         <h1>Order your Pizza</h1>
       </div>
+      <div class="row">
         <h2>Order online and get it delivered fast</h2>
         <br>
       <form id="pizza">
-        <div class="col-md-6">
+        <div class="col-md-4">
       <label for="size">Which size would you like?</label>
         <select class="form-control" id="size">
           <option>small</option>
@@ -43,12 +44,11 @@
       </div>
       <br>
       <button type="submit" name="button">submit</button>
-
-        <span id="result"></span>
+        <ul>
+          <span id="result"></span>
+        </ul>
+      </div>
+      </div>
     </form>
-
-
-    </div>
-
   </body>
 </html>

@@ -48,6 +48,6 @@ $(document).ready(function(){
     event.preventDefault();
     var answer = chosenPizza();
 
-    $("#result").text("your total cost is " + answer.cost());
+    $("#result").text("your total cost is " + answer.cost ());
   });
 });
