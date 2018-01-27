@@ -1,11 +1,11 @@
-//  Business Logic
+// Business Logic
 function Pizza(size, toppings, extras, sodas) {
     this.size = size;
     this.toppings = toppings;
     this.extras = extras;
     this.sodas = sodas;
 }
-function chosenPizza() {
+function Pizzacost() {
   var size = $("#size").val();
   var toppings = $("#toppings").val();
   var extras = $("#extras").val();
@@ -21,7 +21,7 @@ Pizza.prototype.cost = function() {
   if (this.size === 'medium' || this.size === 'small') {
       cost = cost + 5;
   } else {
-      cost = cost + 8;
+      cost = cost + 9;
   };
   if (this.toppings === 'peperoni' || this.toppings === 'artichoke') {
       cost = cost + 2;
@@ -46,8 +46,8 @@ Pizza.prototype.cost = function() {
 $(document).ready(function(){
   $("#pizza").submit(function(event){
     event.preventDefault();
-    var answer = chosenPizza();
+    var answer = Pizzacost();
 
-    $("#result").text("your total cost is " + answer.cost ());
+    $("#result").text("your total cost is: " + answer.cost ());
   });
 });
